@@ -52,7 +52,7 @@ func readFromEnv(key string, defaultValue int32) int32 {
 
 func New(clusterscan *cisoperatorapiv1.ClusterScan, clusterscanprofile *cisoperatorapiv1.ClusterScanProfile, clusterscanbenchmark *cisoperatorapiv1.ClusterScanBenchmark,
 	controllerName string, imageConfig *cisoperatorapiv1.ScanImageConfig, configmapsClient wcorev1.ConfigMapController, tolerations []corev1.Toleration) *batchv1.Job {
-	privileged := true
+	privileged := false
 	job := &batchv1.Job{
 		ObjectMeta: metav1.ObjectMeta{
 			Name:        name.SafeConcatName("security-scan-runner", clusterscan.Name),

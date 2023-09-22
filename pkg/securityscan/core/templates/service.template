@@ -10,7 +10,7 @@ spec:
   type: ClusterIP
   ports:
     - port: 443
-      targetPort: 443
+      targetPort: 8443
       protocol: TCP
   selector:
     app.kubernetes.io/name: {{.appName}}

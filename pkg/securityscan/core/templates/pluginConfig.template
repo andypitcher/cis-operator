@@ -96,8 +96,6 @@ data:
         value: {{ .configDir }}
       {{- end }}
       imagePullPolicy: IfNotPresent
-      securityContext:
-        privileged: true
       volumeMounts:
       - mountPath: /tmp/results
         name: results

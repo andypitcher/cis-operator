@@ -28,7 +28,7 @@ data:
         "Server": {
             "advertiseaddress": "{{.advertiseAddress}}",
             "bindaddress": "0.0.0.0",
-            "bindport": 443,
+            "bindport": 8443,
             "timeoutseconds": 5400
         },
         "Namespace": "{{.namespace}}",
