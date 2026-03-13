@@ -6,9 +6,21 @@ linters:
     - revive
     - misspell
     - ineffassign
+  settings:
+    revive:
+      rules:
+        - name: exported
+          disabled: true
+        - name: package-comments
+          disabled: true
   exclusions:
-    paths:
-      - "zz_generated_"
+    rules:
+      - path: "zz_generated_"
+        linters:
+          - govet
+          - revive
+          - misspell
+          - ineffassign
 formatters:
   enable:
     - gofmt
