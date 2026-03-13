@@ -1,0 +1,29 @@
+version: "2"
+linters:
+  default: none
+  enable:
+    - govet
+    - revive
+    - misspell
+    - ineffassign
+  settings:
+    revive:
+      rules:
+        - name: exported
+          disabled: true
+        - name: package-comments
+          disabled: true
+  exclusions:
+    rules:
+      - path: "zz_generated_"
+        linters:
+          - govet
+          - revive
+          - misspell
+          - ineffassign
+formatters:
+  enable:
+    - gofmt
+    - goimports
+run:
+  timeout: 5m
